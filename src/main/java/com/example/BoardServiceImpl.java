@@ -10,6 +10,8 @@ public class BoardServiceImpl implements BoardService {
     @Autowired
     BoardDAO boardDAO;
 
+
+
     @Override
     public int insertBoard(BoardVO vo) {
         return boardDAO.insertBoard(vo);
