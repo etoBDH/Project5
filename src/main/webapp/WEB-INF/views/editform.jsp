@@ -17,9 +17,9 @@
 <form action="../editok" method="post" accept-charset="UTF-8">
 	<input type="hidden" name="seq" value="<%=u.getSeq()%>"/>
 	<table>
-		<tr><td>주제:</td><td><input type="text" name="title" value="<%= u.getTitle()%>"/></td></tr>
-		<tr><td>랩소속:</td><td><input type="text" name="writer" value="<%= u.getWriter()%>" /></td></tr>
-		<tr><td>랩원들:</td><td><textarea cols="50" rows="5" name="content"><%= u.getContent()%></textarea></td></tr>
+		<tr><td>제목:</td><td><input type="text" name="title" value="<%= u.getTitle()%>"/></td></tr>
+		<tr><td>날짜 기간:</td><td><input type="text" name="writer" value="<%= u.getWriter()%>" /></td></tr>
+		<tr><td>세부 일정:</td><td><textarea cols="50" rows="5" name="content"><%= u.getContent()%></textarea></td></tr>
 		<td>
 			<tr><td>
 

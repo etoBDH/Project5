@@ -35,15 +35,15 @@
     </script>
 </head>
 <body>
-<p>2023 캡스톤 페스티벌</p>
-<h3>인상깊은 목록들</h3>
+<p>Plan Travel</p>
+<h3>장소 리스트</h3>
 <table id="list" width="30%">
     <tr>
         <th>No.</th>
-        <th>주제</th>
-        <th>랩 소속</th>
-        <th>랩원들</th>
-        <th>사용언어</th>
+        <th>제목</th>
+        <th>날짜 기간</th>
+        <th>세부 일정</th>
+        <th>금액</th>
         <th>편집</th>
         <th>삭제</th>
     </tr>
