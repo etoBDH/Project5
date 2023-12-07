@@ -14,9 +14,9 @@ public class BoardDAO {
 
     public int insertBoard(BoardVO vo) {
 
-        String sql = "INSERT INTO BOARD (title, writer, content, category) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO BOARD (title, writer, content, place, category, email) VALUES (?, ?, ?, ?, ?, ?)";
 
-        return jdbcTemplate.update(sql, vo.getTitle(), vo.getWriter(), vo.getContent(), vo.getCategory());
+        return jdbcTemplate.update(sql, vo.getTitle(), vo.getWriter(), vo.getContent(), vo.getPlace(), vo.getCategory(), vo.getEmail());
     }
 
     public int deleteBoard(int seq) {
@@ -24,13 +24,12 @@ public class BoardDAO {
         return jdbcTemplate.update(sql);
     }
 
-    public int updateBoard (BoardVO vo) {
-        String sql = "update BOARD set title='" + vo.getTitle() + "', "
-                + " title='" + vo.getTitle() + "'," +" writer='" + vo.getWriter() + "', " + " content='" + vo.getContent() + "',"
-                + "category='" + vo.getCategory() +"' where seq=" + vo.getSeq();
+    public int updateBoard(BoardVO vo) {
+        String sql = "update BOARD set title=?, writer=?, content=? where seq=?"; // Assuming there's an 'id' column for identifying the record.
 
-        return jdbcTemplate.update(sql);
+        return jdbcTemplate.update(sql, vo.getTitle(), vo.getWriter(), vo.getContent(), vo.getSeq());
     }
+
 
 
     public BoardVO getBoard (int seq) {

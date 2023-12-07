@@ -1,8 +1,7 @@
 package com.example;
 
 
-import java.sql.Timestamp;
-
+import java.util.Date;
 
 public class BoardVO {
 
@@ -10,10 +9,17 @@ public class BoardVO {
     private String title;
     private String writer;
     private String content;
-    private Timestamp regdate;
-    private Timestamp  modifydate;
-    private int cnt;
+
+    private Date regdate;
+
+    private String place;
+
     private String category;
+
+    private String email;
+
+
+
 
     public int getSeq() {
         return seq;
@@ -47,28 +53,18 @@ public class BoardVO {
         this.content = content;
     }
 
-    public Timestamp getRegdate() {
-        return regdate;
-    }
 
-    public void setRegdate(Timestamp regdate) {
+
+    public void setRegdate(Date regdate) {
         this.regdate = regdate;
     }
 
-    public Timestamp getModifydate() {
-        return modifydate;
+    public String getPlace() {
+        return place;
     }
 
-    public void setModifydate(Timestamp modifydate) {
-        this.modifydate = modifydate;
-    }
-
-    public int getCnt() {
-        return cnt;
-    }
-
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
+    public void setPlace(String place) {
+        this.content = place;
     }
 
     public String getCategory() {
@@ -78,4 +74,14 @@ public class BoardVO {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.content = email;
+    }
+
+
 }

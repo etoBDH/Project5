@@ -20,7 +20,7 @@ public class BoardController {
         List<BoardVO> boardList = boardService.getBoardList();
         System.out.println("Board List Size: " + boardList.size());
 
-        model.addAttribute("list",boardService.getBoardList());
+        model.addAttribute("list",boardList = boardService.getBoardList());
 
         return "list";
     }

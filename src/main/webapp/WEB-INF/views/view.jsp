@@ -14,7 +14,7 @@
 
     <script>
         function delete_ok(id){
-            var a = confirm("정말로 삭제하겠습니까?");
+            const a = confirm("정말로 삭제하겠습니까?");
             if(a) location.href='../deleteOK/' + id;
         }
     </script>
@@ -28,7 +28,6 @@
 <p>Writer : <%=u.getWriter() %></p>
 <p>Content : <%=u.getContent() %></p>
 <p>Category : <%=u.getCategory() %></p>
-<p>등록일 : <%=u.getRegdate() %> 수정일 : <%=u.getModifydate()%></p>
 
 
 <a href="../editform/${u.getSeq()}">Edit</a>
